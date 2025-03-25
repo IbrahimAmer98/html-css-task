@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Specifies the main language of the page as English -->
+    <meta charset="UTF-8" />
+    <!-- Defines character encoding, UTF-8 supports multiple languages and special characters -->
+
+    <title>Our Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Basic styling */
+
+      nav {
+        background: #0056b3;
+        padding: 10px;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 10px;
+      }
+      section {
+        padding: 20px;
+        background: white;
+        margin: 10px 0;
+        border-radius: 5px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #333;
+        padding: 10px;
+        text-align: left;
+      }
+      form input,
+      textarea {
+        display: block;
+        margin: 10px 0;
+        padding: 8px;
+        width: 100%;
+      }
+      button {
+        background: green;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      span {
+        color: blue !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!--- Header section -->
+      <header>
+        <h1>React</h1>
+        <p>Learn the most commonly used HTML elements</p>
+      </header>
+
+      <!-- Navigation Bar -->
+      <nav>
+        <a href="#about">About</a>
+        <a href="#table">Table</a>
+        <a href="#form">Form</a>
+        <a href="#js">JavaScript</a>
+      </nav>
+
+      <!-- About Section -->
+      <section id="about" w:50px>
+        <h2 w:2vw>About HTML</h2>
+        <p>
+          <strong>HTML (HyperText Markup Language)</strong> is the standard
+          language for <span style="color: red">creating</span> webpages.
+        </p>
+        <p>
+          It consists of various <em>tags used to structure </em> and display
+          content.
+        </p>
+
+        <!-- Image example -->
+        <img
+          src="https://cloudmatetechnologies.com/wp-content/uploads/2024/06/react.js.png"
+          alt="Example Image"
+          width="300"
+        />
+
+        <!-- List Example -->
+        <h3>Common HTML Tags:</h3>
+        <ul>
+          <li>&lt;h1&gt; to &lt;h6&gt; - Headings</li>
+          <li>&lt;p&gt; - Paragraph</li>
+          <li>&lt;a&gt; - Links</li>
+          <li>&lt;img&gt; - Images</li>
+          <li>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt; - Lists</li>
+          <li>&lt;table&gt; - Tables</li>
+          <li>&lt;form&gt;, &lt;input&gt;, &lt;textarea&gt; - Forms</li>
+        </ul>
+      </section>
+
+      <!-- Table Example -->
+      <section id="table">
+        <h2>Table Example</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>GPA</th>
+              <th>Country</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>25</td>
+              <td>USA</td>
+            </tr>
+            <tr>
+              <td>Ali</td>
+              <td>30</td>
+              <td>Egypt</td>
+            </tr>
+            <tr>
+              <td>Sara</td>
+              <td>22</td>
+              <td>Canada</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <div>
+        <a href="#about">About</a>
+        <a href="#table">Table</a>
+        <a href="#form">Form</a>
+        <a href="#js">JavaScript</a>
+      </div>
+      <!-- Form Example -->
+      <section id="form">
+        <h2>Contact Form</h2>
+        <form>
+          <label for="name">First Name:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name english character only"
+          />
+          <span>English character only</span>
+          <br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email" />
+
+          <label for="message">Message:</label>
+          <textarea id="message" placeholder="Write your message"></textarea>
+
+          <button type="submit">Send ahmad</button>
+        </form>
+      </section>
+
+      <!-- JavaScript Section -->
+      <section id="js">
+        <h2>JavaScript Interaction</h2>
+        <p>Click the button to display a random fact:</p>
+
+        <button id="factButton">Show Fact</button>
+        <p id="factDisplay"></p>
+      </section>
+
+      <!-- Footer Section -->
+      <footer>
+        <p>&copy; 2025 All Rights Reserved.</p>
+      </footer>
+      <div style="margin: 2% auto; display: flex; justify-content: center">
+        <iframe
+          src="file:///C:/Users/iamer/Desktop/React/index.html"
+          name="iframe_a"
+          height="400px"
+          width="70%"
+          title="Iframe Example"
+        ></iframe>
+      </div>
+      <script>
+        // Get the button and paragraph elements
+        const button = document.getElementById("factButton");
+        const factDisplay = document.getElementById("factDisplay");
+
+        // Array of random facts
+        const facts = [
+          "JavaScript was created in just 10 days!",
+          "HTML stands for HyperText Markup Language.",
+          "CSS allows you to style web pages beautifully.",
+          "The first website was published in 1991 by Tim Berners-Lee.",
+          "There are over 1.8 billion websites on the internet!",
+        ];
+
+        // Add event listener to button click
+        button.addEventListener("click", function () {
+          // Get a random fact
+          const randomFact = facts[Math.floor(Math.random() * facts.length)];
+          // Display the fact
+          factDisplay.textContent = randomFact;
+        });
+      </script>
+    </div>
+  </body>
+</html>
